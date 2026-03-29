@@ -1,0 +1,19 @@
+name = "blackroad-radio"
+main = "src/worker.js"
+compatibility_date = "2024-09-01"
+workers_dev = true
+
+routes = [
+  { pattern = "radio.blackroad.io/*", zone_name = "blackroad.io" }
+]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "roundtrip"
+database_id = "ec4efdfb-a76e-46fb-a821-1278e17e7b90"
+
+[triggers]
+crons = ["0 */2 * * *"]
+
+[ai]
+binding = "AI"
